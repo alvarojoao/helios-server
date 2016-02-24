@@ -100,7 +100,7 @@ MEDIA_URL = ''
 # Examples: "http://foo.com/media/", "/media/".
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-STATIC_URL = '/media/'
+STATIC_URL = '/static/'
 #STATIC_URL = '/static/'
 
 #STATIC_ROOT = ROOT_PATH + '/sitestatic'
@@ -112,12 +112,13 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'heliosbooth'),
-    os.path.join(PROJECT_ROOT, 'heliosbooth'),
-    os.path.join(PROJECT_ROOT, '/helios_auth/media'),
-    os.path.join(PROJECT_ROOT, '/helios/media'),
-    os.path.join(PROJECT_ROOT, '/server_ui/media'),
-    os.path.join(PROJECT_ROOT, '/heliosinstitution/media/'),
+    os.path.join(PROJECT_ROOT, 'staticfiles'),
+    os.path.join(PROJECT_ROOT+'staticfiles', 'heliosbooth'),
+    os.path.join(PROJECT_ROOT+'staticfiles', 'heliosbooth'),
+    os.path.join(PROJECT_ROOT+'staticfiles', '/helios_auth/media'),
+    os.path.join(PROJECT_ROOT+'staticfiles', '/helios/media'),
+    os.path.join(PROJECT_ROOT+'staticfiles', '/server_ui/media'),
+    os.path.join(PROJECT_ROOT+'staticfiles', '/heliosinstitution/media/'),
     #ROOT_PATH + '/heliosbooth',
     #ROOT_PATH + '/heliosverifier',
     #ROOT_PATH + '/helios_auth/media',
