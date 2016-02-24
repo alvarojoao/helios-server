@@ -31,7 +31,6 @@ SECRET_KEY = get_from_env('SECRET_KEY', 'replaceme')
 ROOT_URLCONF = 'urls'
 
 ROOT_PATH = os.path.dirname(__file__)
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 ADMINS = (
    ('Shirlei Chaves', 'shirlei@gmail.com'),
@@ -99,12 +98,18 @@ MEDIA_URL = ''
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 STATIC_URL = '/media/'
+#STATIC_URL = '/static/'
 
 #STATIC_ROOT = ROOT_PATH + '/sitestatic'
-
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-#STATIC_URL = '/static/'
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'heliosbooth'),
