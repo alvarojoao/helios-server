@@ -31,6 +31,7 @@ SECRET_KEY = get_from_env('SECRET_KEY', 'replaceme')
 ROOT_URLCONF = 'urls'
 
 ROOT_PATH = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 ADMINS = (
    ('Shirlei Chaves', 'shirlei@gmail.com'),
@@ -100,15 +101,24 @@ MEDIA_URL = ''
 # Examples: "http://foo.com/media/", "/media/".
 STATIC_URL = '/media/'
 
-STATIC_ROOT = ROOT_PATH + '/sitestatic'
+#STATIC_ROOT = ROOT_PATH + '/sitestatic'
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+#STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    ROOT_PATH + '/heliosbooth',
-    ROOT_PATH + '/heliosverifier',
-    ROOT_PATH + '/helios_auth/media',
-    ROOT_PATH + '/helios/media',
-    ROOT_PATH + '/server_ui/media',
-    ROOT_PATH + '/heliosinstitution/media/',
+    os.path.join(PROJECT_ROOT, 'heliosbooth'),
+    os.path.join(PROJECT_ROOT, 'heliosbooth'),
+    os.path.join(PROJECT_ROOT, '/helios_auth/media'),
+    os.path.join(PROJECT_ROOT, '/helios/media'),
+    os.path.join(PROJECT_ROOT, '/server_ui/media'),
+    os.path.join(PROJECT_ROOT, '/heliosinstitution/media/'),
+    #ROOT_PATH + '/heliosbooth',
+    #ROOT_PATH + '/heliosverifier',
+    #ROOT_PATH + '/helios_auth/media',
+    #ROOT_PATH + '/helios/media',
+    #ROOT_PATH + '/server_ui/media',
+    #ROOT_PATH + '/heliosinstitution/media/',
 )
 
 
