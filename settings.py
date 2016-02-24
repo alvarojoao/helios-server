@@ -113,12 +113,12 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'staticfiles'),
-    os.path.join(PROJECT_ROOT+'staticfiles', 'heliosbooth'),
-    os.path.join(PROJECT_ROOT+'staticfiles', 'heliosbooth'),
-    os.path.join(PROJECT_ROOT+'staticfiles', '/helios_auth/media'),
-    os.path.join(PROJECT_ROOT+'staticfiles', '/helios/media'),
-    os.path.join(PROJECT_ROOT+'staticfiles', '/server_ui/media'),
-    os.path.join(PROJECT_ROOT+'staticfiles', '/heliosinstitution/media/'),
+    os.path.join(PROJECT_ROOT, 'heliosbooth'),
+    os.path.join(PROJECT_ROOT, 'heliosbooth'),
+    os.path.join(PROJECT_ROOT, '/helios_auth/media'),
+    os.path.join(PROJECT_ROOT, '/helios/media'),
+    os.path.join(PROJECT_ROOT, '/server_ui/media'),
+    os.path.join(PROJECT_ROOT, '/heliosinstitution/media/'),
     #ROOT_PATH + '/heliosbooth',
     #ROOT_PATH + '/heliosverifier',
     #ROOT_PATH + '/helios_auth/media',
