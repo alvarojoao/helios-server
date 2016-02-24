@@ -30,7 +30,8 @@ ALLOWED_HOSTS = ['sp-helios.cafeexpresso.rnp.br'] # set a value for production e
 SECRET_KEY = get_from_env('SECRET_KEY', 'replaceme')
 ROOT_URLCONF = 'urls'
 
-ROOT_PATH = os.path.dirname(__file__)
+ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
+#os.path.dirname(__file__)
 
 ADMINS = (
    ('Shirlei Chaves', 'shirlei@gmail.com'),
@@ -100,7 +101,7 @@ MEDIA_URL = ''
 # Examples: "http://foo.com/media/", "/media/".
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-STATIC_URL = '/media/'
+STATIC_URL = '/static/'
 #STATIC_URL = '/static/'
 
 #STATIC_ROOT = ROOT_PATH + '/sitestatic'
