@@ -109,7 +109,6 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'staticfiles'),
@@ -127,6 +126,7 @@ STATICFILES_DIRS = (
     #ROOT_PATH + '/heliosinstitution/media/',
 )
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # If debug is set to false and ALLOWED_HOSTS is not declared, django raises  "CommandError: You must set settings.ALLOWED_HOSTS if DEBUG is False."
 # If in production, you got a bad request (400) error
