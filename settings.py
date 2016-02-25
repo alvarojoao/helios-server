@@ -30,8 +30,7 @@ ALLOWED_HOSTS = ['sp-helios.cafeexpresso.rnp.br'] # set a value for production e
 SECRET_KEY = get_from_env('SECRET_KEY', 'replaceme')
 ROOT_URLCONF = 'urls'
 
-ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
-#os.path.dirname(__file__)
+ROOT_PATH = os.path.dirname(__file__)
 
 ADMINS = (
    ('Shirlei Chaves', 'shirlei@gmail.com'),
@@ -112,18 +111,18 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, '/staticfiles'),
-    os.path.join(PROJECT_ROOT, '/heliosbooth'),
-    os.path.join(PROJECT_ROOT, '/helios_auth/media'),
-    os.path.join(PROJECT_ROOT, '/helios/media'),
-    os.path.join(PROJECT_ROOT, '/server_ui/media'),
-    os.path.join(PROJECT_ROOT, '/heliosinstitution/media/'),
-    #ROOT_PATH + '/heliosbooth',
-    #ROOT_PATH + '/heliosverifier',
-    #ROOT_PATH + '/helios_auth/media',
-    #ROOT_PATH + '/helios/media',
-    #ROOT_PATH + '/server_ui/media',
-    #ROOT_PATH + '/heliosinstitution/media/',
+    #os.path.join(PROJECT_ROOT, '/staticfiles'),
+    #os.path.join(PROJECT_ROOT, '/heliosbooth'),
+    #os.path.join(PROJECT_ROOT, '/helios_auth/media'),
+    #os.path.join(PROJECT_ROOT, '/helios/media'),
+    #os.path.join(PROJECT_ROOT, '/server_ui/media'),
+    #os.path.join(PROJECT_ROOT, '/heliosinstitution/media/'),
+    ROOT_PATH + '/heliosbooth',
+    ROOT_PATH + '/heliosverifier',
+    ROOT_PATH + '/helios_auth/media',
+    ROOT_PATH + '/helios/media',
+    ROOT_PATH + '/server_ui/media',
+    ROOT_PATH + '/heliosinstitution/media/',
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
