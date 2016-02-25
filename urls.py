@@ -41,5 +41,5 @@ if settings.DEBUG: # otherwise, they should be served by a webserver like apache
         (r'static/helios/(?P<path>.*)$', 'django.views.static.serve', {'document_root' : settings.ROOT_PATH + '/helios/media'}),
         (r'static/heliosinstitution/(?P<path>.*)$', 'django.views.static.serve', {'document_root' : settings.ROOT_PATH + '/heliosinstitution/media'}),
         (r'static/(?P<path>.*)$', 'django.views.static.serve', {'document_root' : settings.ROOT_PATH + '/server_ui/media'})
-        (r'media/img/(?P<path>.*)$', 'django.views.static.serve', {'document_root' : settings.ROOT_PATH + '/helios/media/img'})
+        (r'media/img/logo.png', 'django.views.static.serve', {'document_root' : settings.ROOT_PATH + '/helios/media/img/logo.png'})
     )
