@@ -11,3 +11,4 @@ heroku run:detached python manage.py syncdb
 heroku run:detached python manage.py migrate
 
 heroku run:detached python manage.py collectstatic --noinput
+heroku run:detached python manage.py celeryd
