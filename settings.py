@@ -101,7 +101,7 @@ MEDIA_URL = ''
 # Examples: "http://foo.com/media/", "/media/".
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-STATIC_URL = '/static/'
+STATIC_URL = '/media/'
 #STATIC_URL = '/static/'
 
 #STATIC_ROOT = ROOT_PATH + '/sitestatic'
