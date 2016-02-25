@@ -1,3 +1,1 @@
-$(function() {
-   $(".datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
-});
+../../helios/media/js/jqsplitdatetime.js
