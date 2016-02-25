@@ -112,6 +112,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 
 STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, '/staticfiles'),
     os.path.join(PROJECT_ROOT, '/heliosbooth'),
     os.path.join(PROJECT_ROOT, '/helios_auth/media'),
     os.path.join(PROJECT_ROOT, '/helios/media'),
