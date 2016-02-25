@@ -1,0 +1,14 @@
+LOCAL
+set DATABASE_URL=postgres://alvaro.joao.silvino:123@localhost:5432/postgres
+
+
+HEROKU
+
+
+heroku buildpacks:set https://github.com/josegonzalez/heroku-buildpack-python
+
+heroku run:detached python manage.py syncdb
+heroku run:detached python manage.py migrate
+
+heroku run:detached python manage.py collectstatic
+
